@@ -1,6 +1,6 @@
 const data = require('../data/zoo_data');
 
-// Fuinção que retorna os dados de um funcionário do zoológico
+// Função que retorna os dados de um funcionário do zoológico
 function getEmployeeByName(name) {
   if (name === undefined) return {}; // Caso não seja passado parâmetro, retornar um objeto vazio
   const employeeFirtsNames = data.employees.map((item) => item.firstName); // Pega as informações do Primeiro Nome para Avaliação

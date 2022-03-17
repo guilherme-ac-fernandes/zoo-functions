@@ -1,5 +1,6 @@
 const data = require('../data/zoo_data');
 
+// Função para realizar a contagem dos animais, podendo ser submetido filtros de sexo e espécie
 function countAnimals(animal) {
   if (animal === undefined) { // Caso o parâmetro da função não for definido, retorna um objeto contendo todos as espécies como chaves e a quantidade como valores
     return data.species.reduce((acc, specie) => {

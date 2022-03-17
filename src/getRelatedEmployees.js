@@ -7,6 +7,7 @@ function isManager(id) {
   return data.employees.some((element) => element.managers.includes(id)); // Se o id informado está dentro do array menagers de algum funcionário
 }
 
+// Função verifica se funcionário e gerente pela função acima e retorna um array contendo todos os funcionário gerenciados, caso não seja, retorna um erro
 function getRelatedEmployees(managerId) {
   if (!isManager(managerId)) { // Se retornar como false, um erro será informado
     throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');

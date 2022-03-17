@@ -29,6 +29,7 @@ const getRegionWithNameAndSex = (sexAnimal, sorted) => data.species.reduce((acc,
   return acc; // Retorna o acumulador para o próximo loop, até sua finalização
 }, {});
 
+// Função que gerencia as tomadas de decisões depedendo do parâmetro
 function getAnimalMap(options) {
   if (options === undefined) return getRegions(); // Função sem parâmetro retorna um objeto contendo as posições cardeais como chaves e os animais de cada localidade como valores (referente a função getRegions())
   const { includeNames, sex, sorted } = options; // Desestruturação do objeto passado como parâmetro

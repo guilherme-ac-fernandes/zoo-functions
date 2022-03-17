@@ -16,6 +16,7 @@ const schedule = () => Object.entries(data.hours).reduce((acc, item) => { // O O
   return acc; // Retorna o acumulador para o próximo loop, até sua finalização
 }, {});
 
+// Função que retorna informação de apenas um dia da semana
 const scheduleDay = (day) => Object.entries(data.hours).reduce((acc, item) => {
   if (item[0] === day) { // Encontra o dia passado como parâmetro para retorna apenas a informação de um dia da semana
     const dayPosition = Object.keys(schedule()).indexOf(day); // Obtém o index referente ao dia da semana, através da procura no array contendo os dias da semana obtido nas chaves do horário de funcionamento completo
