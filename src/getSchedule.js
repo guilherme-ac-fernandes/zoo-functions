@@ -32,7 +32,6 @@ function getSchedule(scheduleTarget) {
   const animalInfo = animals.some((element) => element === scheduleTarget);
   const weekInfo = dayOfWeek.some((element) => element === scheduleTarget);
   const allSchedule = schedule();
-  // console.log(Object.entries(allSchedule));
   if (scheduleTarget === undefined) return allSchedule;
   if (animalInfo === false && weekInfo === false) return allSchedule;
   if (weekInfo === true) return scheduleDay(scheduleTarget);
