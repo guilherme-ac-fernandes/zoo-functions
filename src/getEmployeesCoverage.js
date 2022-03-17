@@ -15,10 +15,9 @@ const arrayAnimalELocation = (employeeInfo) => {
 // Função que cria os dados de todos os funcionário do zoológico
 const employeeList = () => data.employees.map((employee) => {
   const arrays = arrayAnimalELocation(employee);
-  const nameString = `${employee.firstName} ${employee.lastName}`;
   return {
     id: employee.id,
-    fullname: nameString,
+    fullName: `${employee.firstName} ${employee.lastName}`,
     species: arrays.animalArray,
     locations: arrays.locationArray,
   };
@@ -30,7 +29,7 @@ const employeeInfoName = (name) => {
   const arrays = arrayAnimalELocation(employee);
   return {
     id: employee.id,
-    fullname: `${employee.firstName} ${employee.lastName}`,
+    fullName: `${employee.firstName} ${employee.lastName}`,
     species: arrays.animalArray,
     locations: arrays.locationArray,
   };
@@ -42,7 +41,7 @@ const employeeInfoId = (id) => {
   const arrays = arrayAnimalELocation(employee);
   return {
     id: employee.id,
-    fullname: `${employee.firstName} ${employee.lastName}`,
+    fullName: `${employee.firstName} ${employee.lastName}`,
     species: arrays.animalArray,
     locations: arrays.locationArray,
   };
@@ -58,7 +57,5 @@ function getEmployeesCoverage(options) {
   if (idCheck === true) return employeeInfoId(id); // Se idCheck é true - mostra informações do funcionário
   throw new Error('Informações inválidas'); // Se não, mostra mensagem de erro
 }
-
-console.log(getEmployeesCoverage({ name: 'Sharonda' }));
 
 module.exports = getEmployeesCoverage;
