@@ -1,6 +1,6 @@
 ## Projeto Zoo Functions
 
-#### Consiste na criação de funções para facilitar a gestão de um zoológico e atender os testes unitários (não presentes neste repositório).
+#### Consiste na criação de funções para facilitar a gestão de um zoológico.
 > Esta aplicação foi desenvolvida utilizando a linguagem de programação JavaScript.
 > Observação: as funcionalidades criadas estão presentes na pasta src
 
