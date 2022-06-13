@@ -1,20 +1,19 @@
 const data = require('../data/zoo_data');
 
-// Função para realizar a contagem dos animais, podendo ser submetido filtros de sexo e espécie
 function countAnimals(animal) {
-  if (animal === undefined) { // Caso o parâmetro da função não for definido, retorna um objeto contendo todos as espécies como chaves e a quantidade como valores
+  if (animal === undefined) {
     return data.species.reduce((acc, specie) => {
       acc[`${specie.name}`] = specie.residents.length;
       return acc;
-    }, {}); // A HOF reduce (tendo como acumulador um objeto vazio) a cada espécie não existente no objeto, criar uma nova chave e retorna como valor o tamanho do array residents (total de residentes).
+    }, {}); 
   }
-  const { specie, sex } = animal; // Desestruturação do Objeto passado como parâmetro
-  const animalFind = data.species.find((element) => element.name === animal.specie); // Informado o parâmetro specie, retorn o objeto da espécie analisada
-  if (sex !== undefined) { // Caso a função sex for informada, retorna quantidade de animais da espécie e sexo informado
+  const { specie, sex } = animal;
+  const animalFind = data.species.find((element) => element.name === animal.specie);
+  if (sex !== undefined) {
     return animalFind.residents.filter((item) => item.sex === animal.sex).length;
   }
-  if (specie !== undefined) { // Caso apenas a espécie seja informada, retorna o número total de residentes da espécie.
-    return animalFind.residents.length; // Tamanho do array residents (total de residentes)
+  if (specie !== undefined) {
+    return animalFind.residents.length;
   }
 }
 
