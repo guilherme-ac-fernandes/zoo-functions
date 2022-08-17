@@ -7,6 +7,8 @@ Consiste na criação de funções para facilitar a gestão de um zoológico.
 
 ### Descrição das funções criadas: 
 
+<br>
+
 `calculateEntry`: separada em duas funções mediante a prática de responsabilidade única, a primeira função recebe um array de visitantes no formato abaixo e retorna um objeto com a quantidade de pessoas em casa faixa etária: `{ child: 3, adult: 2, senior: 1 }`; e a segunda função recebe o objeto da primeira função e calcula o valor total a ser pago pelas entradas deste grupo de pessoas presente na constante `entrants`.
 
 ```
